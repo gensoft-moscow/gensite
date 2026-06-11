@@ -1,0 +1,14 @@
+.about-page { padding: 110px 48px 140px; }
+.about-page > h1 { font-family: 'Unbounded', sans-serif; font-size: clamp(48px, 7vw, 100px); font-weight: 500; letter-spacing: -.07em; line-height: 1; max-width: 1250px; }
+.about-layout { border-top: 1px solid var(--line); display: grid; gap: 80px; grid-template-columns: .8fr 1.2fr; margin-top: 80px; padding-top: 70px; }
+.about-lead p { font-size: 23px; line-height: 1.55; max-width: 510px; }
+.value-item { border-top: 1px solid var(--line); display: grid; gap: 20px; grid-template-columns: 50px 180px 1fr; padding: 26px 0; }
+.value-item > span { color: var(--blue); font-size: 11px; }
+.value-item h3 { font-family: 'Unbounded', sans-serif; font-size: 16px; font-weight: 500; letter-spacing: -.04em; margin: 0; }
+.value-item p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.stats-row { display: grid; gap: 1px; grid-template-columns: repeat(4, 1fr); margin-top: 100px; }
+.stats-row > div { background: white; display: flex; flex-direction: column; min-height: 180px; padding: 28px; }
+.stats-row > div:first-child { border-radius: 20px 0 0 20px; }
+.stats-row > div:last-child { border-radius: 0 20px 20px 0; }
+.stats-row strong { color: var(--blue); font-family: 'Unbounded', sans-serif; font-size: 44px; font-weight: 500; }
+.stats-row span { color: var(--muted); font-size: 11px; margin-top: auto; }

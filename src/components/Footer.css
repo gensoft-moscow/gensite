@@ -1,0 +1,6 @@
+footer { align-items: center; display: grid; grid-template-columns: 1fr 1fr 1fr; min-height: 170px; padding: 40px 48px; }
+footer .logo { justify-self: start; position: static; width: max-content; }
+footer > p { color: var(--muted); font-size: 11px; justify-self: center; margin: 0; }
+footer > div { display: flex; flex-direction: column; font-size: 12px; gap: 5px; justify-self: end; text-align: right; }
+footer a { text-decoration: none; }
+footer span { color: var(--muted); }

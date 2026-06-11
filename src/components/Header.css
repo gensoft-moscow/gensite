@@ -1,0 +1,118 @@
+.site-header { align-items: center; display: flex; height: 92px; justify-content: center; margin: 0 auto; max-width: 1440px; padding: 0 48px; position: sticky; top: 0; width: 100%; z-index: 20; }
+.logo { align-items: center; background: transparent; display: inline-flex; gap: 10px; padding: 0; }
+.logo-mark { background: var(--ink); border-radius: 12px; display: grid; height: 42px; overflow: hidden; padding: 8px; place-content: center; position: relative; width: 42px; margin-left:8px;}
+.logo-mark span { background: white; border-radius: 10px; display: block; height: 5px; transform: rotate(-35deg); width: 22px; }
+.logo-mark span:last-child { margin-top: 3px; transform: rotate(35deg); }
+.logo-wordmark { display: block; height: 31px; width: auto; }
+.desktop-nav { left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%); }
+.acrylic-tabs-shell,
+.header-acrylic {
+  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08) 52%, rgba(255, 255, 255, 0.18));
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.62),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.14),
+    0 8px 28px rgba(21, 25, 31, 0.08);
+  isolation: isolate;
+  overflow: hidden;
+  padding: 6px;
+  position: relative;
+}
+.acrylic-tabs-shell::before,
+.header-acrylic::before {
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.28), transparent 42%);
+  border-radius: inherit;
+  content: '';
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity .2s ease;
+  z-index: -1;
+}
+.acrylic-tabs-shell::after,
+.header-acrylic::after {
+  background: radial-gradient(circle at 72% 20%, rgba(255, 255, 255, 0.22), transparent 42%);
+  border-radius: inherit;
+  content: '';
+  inset: 1px;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity .2s ease;
+  z-index: -1;
+}
+.header-acrylic { position: absolute; }
+.header-brand { left: 38px; padding: 6px 20px 6px 6px; }
+.header-contact {
+  padding: 4px 14px;
+  right: 38px;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background 0.25s ease;
+}
+.header-contact:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.18),
+    0 13px 30px rgba(21, 25, 31, 0.14),
+    0 3px 8px rgba(21, 25, 31, 0.08);
+  transform: translateY(-2px) scale(1.015);
+}
+.tab-list { align-items: center; display: flex; gap: 2px; }
+.tab-button { background: transparent; border-radius: 999px; color: #555c65; font-size: 13px; font-weight: 600; padding: 11px 18px; position: relative; transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease; white-space: nowrap; }
+.tab-button:hover { color: var(--ink); transform: translateY(-1px); }
+.tab-button.active { background: rgba(21, 25, 31, 0.92); box-shadow: 0 6px 18px rgba(21, 25, 31, 0.18); color: white; }
+.contact-link { align-items: center; background: transparent; display: flex; font-size: 13px; font-weight: 600; gap: 7px; padding: 7px 0; }
+.contact-link svg { transition: transform 0.25s ease; }
+.header-contact:hover .contact-link svg { transform: translate(2px, -2px); }
+.mobile-menu-shell { display: none; }
+
+.site-header .logo-mark,
+.site-header .logo-wordmark,
+.site-header .contact-link,
+.site-header .tab-button {
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    filter 0.25s ease;
+}
+
+.site-header.dark-context .logo-mark {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.site-header.dark-context .logo-mark span {
+  background: var(--ink);
+}
+
+.site-header.dark-context .logo-wordmark {
+  filter: brightness(0) invert(1);
+}
+
+.site-header.dark-context .contact-link {
+  border-color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.site-header.dark-context .tab-button:not(.active) {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.site-header.dark-context .tab-button.active {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+}
+
+.site-header.dark-context .acrylic-tabs-shell {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06) 52%, rgba(255, 255, 255, 0.12));
+}
+
+.site-header.dark-context .header-acrylic {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06) 52%, rgba(255, 255, 255, 0.12));
+}

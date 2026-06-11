@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@500;600&display=swap');
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #15191f;
+  background: #f2f1ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --blue: #2457ff;
+  --ink: #15191f;
+  --muted: #6e747c;
+  --paper: #f2f1ed;
+  --line: rgba(21, 25, 31, 0.14);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--paper); }
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font: inherit;
+}
+button { border: 0; cursor: pointer; }
+button:active,
+a:active {
+  filter: none !important;
+  transform: none !important;
+}
+h1, h2, h3, p { margin-top: 0; }
+main, footer { margin: 0 auto; max-width: 1440px; }
+
+.app { min-height: 100vh; overflow-x: clip; position: relative; }
+.ambient { position: fixed; width: 34rem; height: 34rem; border-radius: 50%; filter: blur(80px); opacity: 0.25; pointer-events: none; z-index: -1; }
+.ambient-one { background: #a9c5ff; right: -12rem; top: -10rem; }
+.ambient-two { background: #d7ff9c; left: -18rem; top: 45rem; opacity: 0.16; }
+.page-enter { animation: pageIn 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.page-section { min-height: 760px; padding-top: 170px; }
+.eyebrow, .section-kicker { align-items: center; color: var(--blue); display: flex; font-size: 11px; font-weight: 600; gap: 8px; letter-spacing: 0.14em; margin: 0 0 26px; text-transform: uppercase; }
+.section-heading { align-items: flex-end; display: flex; justify-content: space-between; margin-bottom: 64px; }
+.section-heading h2, .contact-section h2 { font-family: 'Unbounded', sans-serif; font-size: clamp(34px, 4vw, 58px); font-weight: 500; letter-spacing: -0.055em; line-height: 1.12; margin: 0; max-width: 780px; }
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

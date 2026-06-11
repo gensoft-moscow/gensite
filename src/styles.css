@@ -1,0 +1,10 @@
+@import './styles/base.css';
+@import './components/Header.css';
+@import './components/Footer.css';
+@import './components/HeroGraph.css';
+@import './sections/Home.css';
+@import './sections/Services.css';
+@import './sections/Cases.css';
+@import './sections/About.css';
+@import './sections/Contact.css';
+@import './styles/responsive.css';

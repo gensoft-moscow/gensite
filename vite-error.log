@@ -1,0 +1,45 @@
+[2m11:27:25[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "./sections/Cases" from "src/App.jsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/Work/GenSoft/GenSIte/src/App.jsx[39m:5:18
+[33m  3  |  import Header from "./components/Header";
+  4  |  import About from "./sections/About";
+  5  |  import Cases from "./sections/Cases";
+     |                     ^
+  6  |  import Contact from "./sections/Contact";
+  7  |  import Home from "./sections/Home";[39m
+[2m11:27:25[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./sections/About" from "src/App.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/Work/GenSoft/GenSIte/src/App.jsx[39m:4:18
+[33m  2  |  import Footer from "./components/Footer";
+  3  |  import Header from "./components/Header";
+  4  |  import About from "./sections/About";
+     |                     ^
+  5  |  import Cases from "./sections/Cases";
+  6  |  import Contact from "./sections/Contact";[39m
+      at TransformPluginContext._formatLog (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:30602:39)
+      at TransformPluginContext.error (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:30599:14)
+      at normalizeUrl (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:27842:18)
+      at async file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:27905:30
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:27873:4)
+      at async EnvironmentPluginContainer.transform (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:30387:14)
+      at async loadAndTransform (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:24646:26)
+      at async viteTransformMiddleware (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:24440:20)
+[2m11:27:25[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./sections/About" from "src/App.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mD:/Work/GenSoft/GenSIte/src/App.jsx[39m:4:18
+[33m  2  |  import Footer from "./components/Footer";
+  3  |  import Header from "./components/Header";
+  4  |  import About from "./sections/About";
+     |                     ^
+  5  |  import Cases from "./sections/Cases";
+  6  |  import Contact from "./sections/Contact";[39m
+      at TransformPluginContext._formatLog (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:30602:39)
+      at TransformPluginContext.error (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:30599:14)
+      at normalizeUrl (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:27842:18)
+      at async file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:27905:30
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:27873:4)
+      at async EnvironmentPluginContainer.transform (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:30387:14)
+      at async loadAndTransform (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:24646:26)
+      at async viteTransformMiddleware (file:///D:/Work/GenSoft/GenSIte/node_modules/vite/dist/node/chunks/node.js:24440:20)

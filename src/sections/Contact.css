@@ -1,0 +1,10 @@
+.contact-section { align-items: flex-end; background: var(--blue); color: white; display: grid; gap: 40px; grid-template-columns: 1.4fr 1fr; margin: 0; min-height: 460px; padding: 90px 48px 60px; }
+@media (max-width: 1680px) {
+  .contact-section {
+    box-shadow: 0 0 0 100vmax var(--blue);
+    clip-path: inset(0 -100vmax);
+  }
+}
+.contact-section .section-kicker { color: rgba(255,255,255,.65); }
+.contact-email { align-items: center; border-bottom: 1px solid rgba(255,255,255,.7); display: flex; font-family: 'Unbounded', sans-serif; font-size: clamp(19px,2.5vw,34px); gap: 18px; justify-content: space-between; padding: 0 0 16px; text-decoration: none; }
+.contact-note { align-items: center; display: flex; font-size: 11px; gap: 8px; grid-column: 2; opacity: .72; }

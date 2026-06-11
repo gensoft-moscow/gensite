@@ -1,0 +1,14 @@
+.hero-visual { align-items: center; display: flex; justify-content: center; min-width: 0; width: 100%; }
+.graph-field { aspect-ratio: 0.92; height: min(700px, 76vw); max-width: 680px; position: relative; width: 116%; }
+.hero-graph { height: 100%; inset: 0; overflow: visible; position: absolute; width: 100%; }
+.graph-layer { color: #45608e; transform-box: fill-box; transform-origin: center; }
+.graph-layer-back { color: #69768a; opacity: 0.09; }
+.graph-layer-middle { color: #2457ff; opacity: 0.12; }
+.graph-layer-front { color: #34435a; opacity: 0.22; }
+.graph-edges line { animation: edgeDraw 1.15s cubic-bezier(0.35, 0, 0.2, 1) both; animation-delay: var(--edge-delay); stroke: currentColor; stroke-dasharray: 1; stroke-dashoffset: 1; stroke-linecap: round; stroke-width: 1; }
+.graph-node { animation: nodeRise 1s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: var(--node-delay); fill: currentColor; transform-box: fill-box; transform-origin: center; }
+@keyframes edgeDraw { to { stroke-dashoffset: 0; } }
+@keyframes nodeRise {
+  from { opacity: 0; transform: translateY(75px); }
+  to { opacity: 1; transform: translateY(0); }
+}
