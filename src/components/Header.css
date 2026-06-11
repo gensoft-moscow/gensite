@@ -20,6 +20,8 @@
   overflow: hidden;
   padding: 6px;
   position: relative;
+  transform: translateZ(0);
+  will-change: backdrop-filter;
 }
 .acrylic-tabs-shell::before,
 .header-acrylic::before {

@@ -5,7 +5,11 @@ function Logo({ onClick }) {
         <span />
         <span />
       </span>
-      <img className="logo-wordmark" src="/images/Gensoft.svg" alt="GenSoft" />
+      <img
+        className="logo-wordmark"
+        src={`${import.meta.env.BASE_URL}images/Gensoft.svg`}
+        alt="GenSoft"
+      />
     </button>
   )
 }
