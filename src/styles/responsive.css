@@ -76,6 +76,13 @@
   .mobile-menu button:nth-child(3) { transition-delay: .06s; }
   .mobile-menu button:nth-child(4) { transition-delay: .09s; }
   .mobile-menu button.active { color: var(--blue); }
+  .site-header.dark-context .menu-button,
+  .site-header.dark-context .mobile-menu button {
+    color: rgba(255, 255, 255, 0.92);
+  }
+  .site-header.dark-context .mobile-menu button.active {
+    color: white;
+  }
   .site-header.menu-open .mobile-menu-shell {
     border-radius: 28px;
     height: 264px;

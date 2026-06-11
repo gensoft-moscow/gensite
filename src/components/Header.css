@@ -1,6 +1,11 @@
 .site-header { align-items: center; display: flex; height: 92px; justify-content: center; margin: 0 auto; max-width: 1440px; padding: 0 48px; position: sticky; top: 0; width: 100%; z-index: 20; }
 .logo { align-items: center; background: transparent; display: inline-flex; gap: 10px; padding: 0; }
-.logo-mark { display: block; flex: 0 0 44px; height: 44px; width: 44px; }
+.logo-mark { display: block; flex: 0 0 44px; height: 44px; position: relative; width: 44px; }
+.logo-mark-image { display: block; height: 100%; inset: 0; position: absolute; transition: opacity 0.25s ease; width: 100%; }
+.logo-mark-dark { opacity: 1; }
+.logo-mark-light { opacity: 0; }
+.logo-mark.is-light .logo-mark-dark { opacity: 0; }
+.logo-mark.is-light .logo-mark-light { opacity: 1; }
 .logo-wordmark { display: block; height: 36px; width: auto; }
 .desktop-nav { left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%); }
 .acrylic-tabs-shell,
