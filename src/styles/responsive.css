@@ -2,7 +2,7 @@
   .site-header { justify-content: space-between; padding: 0 14px; }
   .header-brand {
     left: 14px;
-    max-width: 196px;
+    max-width: 223px;
     opacity: 1;
     transition:
       max-width 0.38s cubic-bezier(.2,.8,.2,1) 0.16s,
@@ -13,7 +13,7 @@
     z-index: 22;
   }
   .header-brand .logo {
-    min-width: 176px;
+    min-width: 198px;
   }
   .desktop-nav, .header-contact { display: none; }
   .mobile-menu-shell {

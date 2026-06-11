@@ -1,9 +1,7 @@
 .site-header { align-items: center; display: flex; height: 92px; justify-content: center; margin: 0 auto; max-width: 1440px; padding: 0 48px; position: sticky; top: 0; width: 100%; z-index: 20; }
 .logo { align-items: center; background: transparent; display: inline-flex; gap: 10px; padding: 0; }
-.logo-mark { background: var(--ink); border-radius: 12px; display: grid; height: 42px; overflow: hidden; padding: 8px; place-content: center; position: relative; width: 42px; margin-left:8px;}
-.logo-mark span { background: white; border-radius: 10px; display: block; height: 5px; transform: rotate(-35deg); width: 22px; }
-.logo-mark span:last-child { margin-top: 3px; transform: rotate(35deg); }
-.logo-wordmark { display: block; height: 31px; width: auto; }
+.logo-mark { display: block; flex: 0 0 44px; height: 44px; width: 44px; }
+.logo-wordmark { display: block; height: 36px; width: auto; }
 .desktop-nav { left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%); }
 .acrylic-tabs-shell,
 .header-acrylic {
@@ -22,6 +20,7 @@
   position: relative;
   transform: translateZ(0);
   will-change: backdrop-filter;
+  height: 54px;
 }
 .acrylic-tabs-shell::before,
 .header-acrylic::before {
@@ -46,7 +45,7 @@
   z-index: -1;
 }
 .header-acrylic { position: absolute; }
-.header-brand { left: 38px; padding: 6px 20px 6px 6px; }
+.header-brand { left: 38px; padding: 5px 20px 5px 5px; }
 .header-contact {
   padding: 4px 14px;
   right: 38px;
@@ -81,14 +80,6 @@
     background 0.25s ease,
     border-color 0.25s ease,
     filter 0.25s ease;
-}
-
-.site-header.dark-context .logo-mark {
-  background: rgba(255, 255, 255, 0.94);
-}
-
-.site-header.dark-context .logo-mark span {
-  background: var(--ink);
 }
 
 .site-header.dark-context .logo-wordmark {
