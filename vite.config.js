@@ -5,6 +5,6 @@ export default defineConfig(({ command }) => ({
   plugins: [react()],
   base: command === 'build' ? '/gensite/' : '/',
   server: {
-    allowedHosts: ['grape.ru.tuna.am', 'localhost'],
+    allowedHosts: ['grape.ru.tuna.am', 'gensite.ru.tuna.am', 'localhost'],
   },
 }))
