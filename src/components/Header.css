@@ -47,6 +47,7 @@
 .header-acrylic { position: absolute; }
 .header-brand { left: 38px; padding: 5px 20px 5px 5px; }
 .header-contact {
+  height: 54px;
   padding: 4px 14px;
   right: 38px;
   transition:
@@ -66,7 +67,7 @@
 .tab-button { background: transparent; border-radius: 999px; color: #555c65; font-size: 13px; font-weight: 600; padding: 11px 18px; position: relative; transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease; white-space: nowrap; }
 .tab-button:hover { color: var(--ink); transform: translateY(-1px); }
 .tab-button.active { background: rgba(21, 25, 31, 0.92); box-shadow: 0 6px 18px rgba(21, 25, 31, 0.18); color: white; }
-.contact-link { align-items: center; background: transparent; display: flex; font-size: 13px; font-weight: 600; gap: 7px; padding: 7px 0; }
+.contact-link { align-items: center; background: transparent; display: flex; font-size: 13px; font-weight: 600; gap: 7px; height: 100%; justify-content: center; line-height: 17px; padding: 0; text-align: center; width: 100%; }
 .contact-link svg { transition: transform 0.25s ease; }
 .header-contact:hover .contact-link svg { transform: translate(2px, -2px); }
 .mobile-menu-shell { display: none; }
