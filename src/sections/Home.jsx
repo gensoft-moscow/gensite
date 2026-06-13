@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from 'react'
 import { ArrowDownRight, ChevronRight, Sparkles } from 'lucide-react'
+import DynamicHeroGraph from '../components/DynamicHeroGraph'
 import HeroGraph from '../components/HeroGraph'
 import { sectionVisibility } from '../config/sectionVisibility'
 import Cases from './Cases'
@@ -66,7 +67,10 @@ function Home({ setActiveTab }) {
           </div>
         </div>
         <div className="hero-visual">
-          <HeroGraph />
+          <div className="legacy-hero-graph">
+            <HeroGraph />
+          </div>
+          <DynamicHeroGraph />
         </div>
         <div className="hero-footnote">
           <span>Москва · Работаем по всему миру</span>

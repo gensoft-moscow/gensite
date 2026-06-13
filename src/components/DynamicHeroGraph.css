@@ -1,0 +1,29 @@
+.dynamic-graph-field { position: relative; }
+.dynamic-hero-graph { height: 100%; inset: 0; overflow: visible; position: absolute; width: 100%; }
+.dynamic-graph-layer { color: #45608e; }
+.dynamic-graph-back { color: #69768a; opacity: .09; }
+.dynamic-graph-middle { color: #2457ff; opacity: .13; }
+.dynamic-graph-front { color: #34435a; opacity: .23; }
+.dynamic-graph-edges line {
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1;
+  transition: opacity .7s ease;
+}
+.dynamic-graph-nodes circle {
+  animation: dynamicNodeIn 1s cubic-bezier(.16,1,.3,1) both;
+  animation-delay: var(--node-delay);
+  fill: currentColor;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.legacy-hero-graph { display: none; }
+
+@keyframes dynamicNodeIn {
+  from { opacity: 0; transform: translateY(75px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dynamic-graph-edges line { transition: none; }
+}

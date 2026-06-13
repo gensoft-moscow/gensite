@@ -2,6 +2,7 @@
 @import './components/Header.css';
 @import './components/Footer.css';
 @import './components/HeroGraph.css';
+@import './components/DynamicHeroGraph.css';
 @import './sections/Home.css';
 @import './sections/Services.css';
 @import './sections/Technologies.css';
