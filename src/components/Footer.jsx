@@ -4,10 +4,10 @@ function Footer({ setActiveTab }) {
   return (
     <footer>
       <Logo onClick={() => setActiveTab('home')} />
-      <p>© 2026 ООО «Ген Софт»</p>
+      <p>© 2026 ООО «СОФТГЕН»</p>
       <div>
-        <a href="mailto:hello@gensoft.ru">hello@gensoft.ru</a>
-        <span>Москва</span>
+        <a href="mailto:info@softgen.ru">info@softgen.ru</a>
+        <span>Нижний Новгород</span>
       </div>
     </footer>
   )

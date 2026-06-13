@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import { sectionVisibility } from './config/sectionVisibility'
 import About from './sections/About'
 import Cases from './sections/Cases'
 import Contact from './sections/Contact'
@@ -25,9 +26,9 @@ function App() {
         {activeTab === 'services' && <Services expanded setActiveTab={changeTab} />}
         {activeTab === 'cases' && <Cases expanded setActiveTab={changeTab} />}
         {activeTab === 'about' && <About />}
-        <Contact />
+        {sectionVisibility.contact && <Contact />}
       </main>
-      <Footer setActiveTab={changeTab} />
+      {sectionVisibility.footer && <Footer setActiveTab={changeTab} />}
     </div>
   )
 }

@@ -1,5 +1,5 @@
-.hero { display: grid; grid-template-columns: 0.92fr 1.08fr; min-height: 790px; margin-top: -92px; padding: 164px 48px 60px; position: relative; }
-.hero-copy { align-self: center; max-width: 650px; padding-bottom: 60px; position: relative; z-index: 2; }
+.hero { align-items: center; display: grid; grid-template-columns: 0.92fr 1.08fr; height: 100svh; min-height: 700px; margin-top: -92px; padding: 92px 48px 60px; position: relative; }
+.hero-copy { align-self: center; max-width: 650px; position: relative; z-index: 2; }
 .hero h1 { font-family: 'Unbounded', sans-serif; font-size: clamp(49px, 5.25vw, 78px); font-weight: 500; letter-spacing: -0.065em; line-height: 1.04; margin-bottom: 30px; }
 .hero-title-line { display: inline; }
 .hero-title-text { display: inline; }
@@ -15,7 +15,7 @@
 .text-button { align-items: center; background: transparent; display: flex; font-size: 14px; font-weight: 600; gap: 5px; }
 .hero-footnote { align-items: center; bottom: 38px; color: var(--muted); display: flex; font-size: 10px; gap: 14px; left: 48px; letter-spacing: 0.08em; position: absolute; text-transform: uppercase; }
 .hero-footnote .line { background: var(--line); height: 1px; width: 54px; }
-.statement-section { border-top: 1px solid var(--line); padding: 120px 48px 140px; }
+.statement-section { border-top: 1px solid var(--line); padding: 80px 48px 92px; }
 .statement-section > p { color: var(--blue); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
-.statement-section h2 { font-family: 'Unbounded', sans-serif; font-size: clamp(32px, 4vw, 58px); font-weight: 500; letter-spacing: -0.055em; line-height: 1.25; margin: 58px 0 0 auto; max-width: 1100px; }
+.statement-section h2 { font-family: 'Unbounded', sans-serif; font-size: clamp(32px, 4vw, 58px); font-weight: 500; letter-spacing: -0.055em; line-height: 1.25; margin: 38px 0 0 auto; max-width: 1100px; }
 .statement-section h2 span { color: #92969b; }

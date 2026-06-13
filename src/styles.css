@@ -4,7 +4,9 @@
 @import './components/HeroGraph.css';
 @import './sections/Home.css';
 @import './sections/Services.css';
+@import './sections/Technologies.css';
 @import './sections/Cases.css';
 @import './sections/About.css';
+@import './sections/CompanyDetails.css';
 @import './sections/Contact.css';
 @import './styles/responsive.css';

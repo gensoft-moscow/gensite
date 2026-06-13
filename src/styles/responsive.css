@@ -116,29 +116,34 @@
   .site-header.menu-open .header-brand::after {
     opacity: 0 !important;
   }
-  .hero { grid-template-columns: 1fr; margin-top: -92px; padding: 145px 24px 80px; }
-  .hero-copy { padding-bottom: 30px; }
+  .hero { align-content: center; height: auto; grid-template-columns: 1fr; margin-top: -92px; min-height: 100svh; padding: 110px 24px 64px; }
+  .hero-copy { padding-bottom: 20px; }
   .hero-visual { margin: 10px auto 70px; max-width: 760px; }
   .graph-field { height: min(760px, 110vw); width: 100%; }
   .hero-footnote { bottom: 32px; left: 24px; }
   .statement-section, .services-section, .cases-section, .about-page { padding-left: 24px; padding-right: 24px; }
   .service-grid, .case-grid { grid-template-columns: 1fr; }
-  .service-card { min-height: 330px; }
+  .service-card { min-height: 300px; }
   .service-card:first-child { border-radius: 24px 24px 0 0; }
+  .service-card:nth-child(3),
+  .service-card:nth-child(4) { border-radius: 0; }
   .service-card:last-child { border-radius: 0 0 24px 24px; }
+  .technology-grid { grid-template-columns: repeat(2,1fr); }
+  .details-section { grid-template-columns: 1fr; }
   .process-row, .stats-row { grid-template-columns: repeat(2,1fr); }
   .about-layout, .contact-section { grid-template-columns: 1fr; }
-  .contact-note { grid-column: auto; }
 }
 
 @media (max-width: 620px) {
   .site-header { height: 78px; }
   .hero {
-    display: block;
+    align-items: center;
+    display: flex;
+    height: 100svh;
     margin-top: -78px;
-    min-height: 720px;
+    min-height: 680px;
     overflow: hidden;
-    padding: 122px 8px 72px;
+    padding: 78px 8px 40px;
   }
   .hero-copy {
     max-width: none;
@@ -215,19 +220,30 @@
   }
   .graph-field { height: 100%; max-width: none; width: 100%; }
   .hero-footnote { display: none; }
-  .statement-section { padding-bottom: 90px; padding-top: 90px; }
-  .statement-section h2 { margin-top: 40px; }
-  .services-section, .cases-section, .about-page { padding-bottom: 90px; padding-top: 90px; }
-  .page-section { padding-top: 130px; }
-  .section-heading { align-items: flex-start; flex-direction: column; gap: 30px; }
-  .service-card h3 { margin-top: 70px; }
+  .statement-section { padding-bottom: 68px; padding-top: 64px; }
+  .statement-section h2 { margin-top: 28px; }
+  .services-section, .technologies-section, .details-section, .cases-section, .about-page { padding: 64px 24px 72px; }
+  .page-section { padding-top: 104px; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 24px; margin-bottom: 36px; }
+  .section-heading.has-cta > div { padding-right: 0; padding-top: 58px; }
+  .section-heading.has-cta .section-cta { left: auto; right: 0; top: 0; }
+  .service-card h3 { margin-top: 48px; }
+  .technology-grid { grid-template-columns: 1fr; }
+  .technology-card { padding: 18px 20px 20px; }
+  .technology-card h3 { margin: 12px 0 15px; }
+  .technologies-intro { max-width: 100%; }
+  .details-section { gap: 38px; }
+  .details-list > div { gap: 10px; grid-template-columns: 1fr; }
   .process-row, .stats-row { grid-template-columns: 1fr; }
   .process-step { border-bottom: 1px solid var(--line); padding-bottom: 20px; }
   .stats-row > div:first-child, .stats-row > div:last-child { border-radius: 0; }
   .value-item { gap: 12px; grid-template-columns: 35px 1fr; }
   .value-item p { grid-column: 2; }
-  .contact-section { min-height: 500px; padding: 70px 24px 40px; }
-  footer { align-items: flex-start; gap: 28px; grid-template-columns: 1fr; padding: 45px 24px; }
+  .contact-section { gap: 42px; min-height: 430px; padding: 64px 24px 44px; }
+  .contact-list { grid-template-columns: 1fr; }
+  .contact-item { min-height: 132px; padding: 20px; }
+  .contact-item:last-child { grid-column: auto; }
+  footer { align-items: flex-start; gap: 24px; grid-template-columns: 1fr; min-height: 150px; padding: 34px 24px; }
   footer > p, footer > div { justify-self: start; text-align: left; }
 }
 

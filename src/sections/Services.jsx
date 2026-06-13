@@ -1,55 +1,87 @@
-import { ArrowUpRight, Bot, Code2, Database } from 'lucide-react'
+import {
+  ArrowUpRight,
+  Blocks,
+  Code2,
+  Headphones,
+  RefreshCw,
+  SearchCheck,
+  Users,
+} from 'lucide-react'
 
 const services = [
   {
     icon: Code2,
     number: '01',
-    title: 'Цифровые продукты',
-    text: 'Проектируем веб-сервисы и мобильные приложения, которыми удобно пользоваться каждый день.',
-    tags: ['Product design', 'Web & Mobile'],
+    title: 'Разработка ПО',
+    text: 'Создаём программные продукты под конкретные процессы компании: от исследования задачи и прототипа до запуска готовой системы.',
+    tags: ['Web', 'Mobile', 'Desktop'],
   },
   {
-    icon: Database,
+    icon: Users,
     number: '02',
-    title: 'Бизнес-системы',
-    text: 'Автоматизируем процессы и объединяем разрозненные инструменты в прозрачную экосистему.',
-    tags: ['ERP / CRM', 'Интеграции'],
+    title: 'Усиление команды',
+    text: 'Подключаем отдельных инженеров или собранную команду, когда проекту нужны дополнительные компетенции и скорость.',
+    tags: ['Outstaff', 'Dedicated team'],
   },
   {
-    icon: Bot,
+    icon: RefreshCw,
     number: '03',
-    title: 'AI и аналитика',
-    text: 'Встраиваем прикладной ИИ в продукты и превращаем массивы данных в понятные решения.',
-    tags: ['AI agents', 'Data platforms'],
+    title: 'Развитие систем',
+    text: 'Обновляем устаревшие решения, улучшаем архитектуру и добавляем новые возможности без остановки рабочих процессов.',
+    tags: ['Modernization', 'Refactoring'],
+  },
+  {
+    icon: Headphones,
+    number: '04',
+    title: 'Поддержка',
+    text: 'Следим за стабильностью продукта после релиза, устраняем сбои и планомерно развиваем систему вместе с бизнесом.',
+    tags: ['SLA', 'Monitoring'],
+  },
+  {
+    icon: SearchCheck,
+    number: '05',
+    title: 'Тестирование',
+    text: 'Проверяем функциональность, нагрузку и безопасность, чтобы пользователи получали предсказуемый и надёжный продукт.',
+    tags: ['QA', 'Automation'],
+  },
+  {
+    icon: Blocks,
+    number: '06',
+    title: 'IT-консалтинг',
+    text: 'Помогаем выбрать технологический путь, оценить риски и превратить бизнес-требования в реалистичный план разработки.',
+    tags: ['Audit', 'Architecture'],
   },
 ]
 
 const processSteps = [
-  ['Исследуем', 'Контекст, пользователи, метрики'],
-  ['Проектируем', 'Архитектура и интерфейсы'],
-  ['Разрабатываем', 'Код, тесты и запуск'],
-  ['Развиваем', 'Данные и новые сценарии'],
+  ['Исследуем', 'Контекст, пользователи и ограничения'],
+  ['Проектируем', 'Архитектура, сценарии и интерфейсы'],
+  ['Разрабатываем', 'Код, тесты и запуск продукта'],
+  ['Развиваем', 'Метрики, поддержка и новые функции'],
 ]
 
 function Services({ setActiveTab, expanded = false }) {
   return (
     <section className={`services-section ${expanded ? 'page-section' : ''}`}>
-      <div className="section-heading">
+      <div className="section-heading has-cta">
         <div>
-          <p className="section-kicker">Что мы делаем</p>
+          <p className="section-kicker">Наши услуги</p>
           <h2>
             {expanded
-              ? 'Технологии под задачу, а не наоборот.'
-              : 'От идеи до работающей системы.'}
+              ? 'Берём на себя разработку и развитие цифровых продуктов.'
+              : 'Подключаемся там, где технологии должны приносить результат.'}
           </h2>
         </div>
         {!expanded && (
           <button
-            className="round-link"
+            className="section-cta"
             onClick={() => setActiveTab('services')}
-            aria-label="Все решения"
+            aria-label="Все услуги"
           >
-            <ArrowUpRight />
+            <span>Все услуги</span>
+            <span className="section-cta-icon">
+              <ArrowUpRight />
+            </span>
           </button>
         )}
       </div>

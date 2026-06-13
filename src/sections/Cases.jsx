@@ -4,7 +4,7 @@ import { cases } from '../data/siteData'
 function Cases({ setActiveTab, expanded = false }) {
   return (
     <section className={`cases-section ${expanded ? 'page-section' : ''}`}>
-      <div className="section-heading light">
+      <div className="section-heading light has-cta">
         <div>
           <p className="section-kicker">Избранные проекты</p>
           <h2>
@@ -14,8 +14,11 @@ function Cases({ setActiveTab, expanded = false }) {
           </h2>
         </div>
         {!expanded && (
-          <button className="all-cases" onClick={() => setActiveTab('cases')}>
-            Все проекты <ArrowUpRight size={18} />
+          <button className="section-cta section-cta-light" onClick={() => setActiveTab('cases')}>
+            <span>Все проекты</span>
+            <span className="section-cta-icon">
+              <ArrowUpRight />
+            </span>
           </button>
         )}
       </div>

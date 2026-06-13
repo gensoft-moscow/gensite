@@ -1,8 +1,11 @@
 import { useLayoutEffect, useRef } from 'react'
 import { ArrowDownRight, ChevronRight, Sparkles } from 'lucide-react'
 import HeroGraph from '../components/HeroGraph'
+import { sectionVisibility } from '../config/sectionVisibility'
 import Cases from './Cases'
+import CompanyDetails from './CompanyDetails'
 import Services from './Services'
+import Technologies from './Technologies'
 
 function FittedTitleLine({ className, children }) {
   const lineRef = useRef(null)
@@ -38,7 +41,7 @@ function FittedTitleLine({ className, children }) {
 function Home({ setActiveTab }) {
   return (
     <>
-      <section className="hero">
+      {sectionVisibility.hero && <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">
             <Sparkles size={14} /> Разработка цифровых решений
@@ -70,9 +73,9 @@ function Home({ setActiveTab }) {
           <span className="line" />
           <span>С 2014 года</span>
         </div>
-      </section>
+      </section>}
 
-      <section className="statement-section">
+      {sectionVisibility.approach && <section className="statement-section">
         <p>Наш подход</p>
         <h2>
           Не просто пишем код.
@@ -81,10 +84,12 @@ function Home({ setActiveTab }) {
           <br />
           и отвечаем за результат.
         </h2>
-      </section>
+      </section>}
 
-      <Services setActiveTab={setActiveTab} />
-      <Cases setActiveTab={setActiveTab} />
+      {sectionVisibility.services && <Services setActiveTab={setActiveTab} />}
+      {sectionVisibility.technologies && <Technologies />}
+      {sectionVisibility.cases && <Cases setActiveTab={setActiveTab} />}
+      {sectionVisibility.companyDetails && <CompanyDetails />}
     </>
   )
 }

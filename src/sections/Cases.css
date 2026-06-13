@@ -1,14 +1,13 @@
-.cases-section { background: var(--ink); color: white; padding: 110px 48px 130px; }
-@media (max-width: 1680px) {
+.cases-section { background: var(--ink); color: white; padding: 76px 48px 88px; }
+@media (max-width: 2199px) {
   .cases-section {
     box-shadow: 0 0 0 100vmax var(--ink);
     clip-path: inset(0 -100vmax);
   }
 }
 .section-heading.light .section-kicker { color: #8ea9ff; }
-.all-cases { align-items: center; background: transparent; border-bottom: 1px solid rgba(255,255,255,.35); color: white; display: flex; font-size: 13px; gap: 8px; padding: 8px 0; }
 .case-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
-.case-card { border-radius: 24px; display: flex; flex-direction: column; justify-content: space-between; min-height: 470px; overflow: hidden; padding: 28px; position: relative; }
+.case-card { border-radius: 24px; display: flex; flex-direction: column; justify-content: space-between; min-height: 420px; overflow: hidden; padding: 28px; position: relative; }
 .case-card.blue { background: #2f5fff; }
 .case-card.lime { background: #c9f27b; color: var(--ink); }
 .case-card.dark { background: #282d34; }
