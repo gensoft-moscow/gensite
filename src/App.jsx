@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { sectionVisibility } from './config/sectionVisibility'
@@ -10,6 +10,21 @@ import Services from './sections/Services'
 
 function App() {
   const [activeTab, setActiveTab] = useState('home')
+  const projectsTheme = activeTab === 'cases'
+
+  useEffect(() => {
+    const themeColor = projectsTheme ? '#15191f' : '#f2f1ed'
+    const metaTheme = document.querySelector('meta[name="theme-color"]')
+
+    document.documentElement.style.backgroundColor = themeColor
+    document.body.style.backgroundColor = themeColor
+    metaTheme?.setAttribute('content', themeColor)
+
+    return () => {
+      document.documentElement.style.backgroundColor = ''
+      document.body.style.backgroundColor = ''
+    }
+  }, [projectsTheme])
 
   const changeTab = (tab) => {
     setActiveTab(tab)
@@ -17,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className={`app ${projectsTheme ? 'projects-theme' : ''}`}>
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
       <Header activeTab={activeTab} setActiveTab={changeTab} />
@@ -26,9 +41,11 @@ function App() {
         {activeTab === 'services' && <Services expanded setActiveTab={changeTab} />}
         {activeTab === 'cases' && <Cases expanded setActiveTab={changeTab} />}
         {activeTab === 'about' && <About />}
-        {sectionVisibility.contact && <Contact />}
+        {sectionVisibility.contact && !projectsTheme && <Contact />}
       </main>
-      {sectionVisibility.footer && <Footer setActiveTab={changeTab} />}
+      {sectionVisibility.footer && (
+        <Footer dark={projectsTheme} setActiveTab={changeTab} />
+      )}
     </div>
   )
 }

@@ -91,8 +91,8 @@ function Home({ setActiveTab }) {
       </section>}
 
       {sectionVisibility.services && <Services setActiveTab={setActiveTab} />}
-      {sectionVisibility.technologies && <Technologies />}
       {sectionVisibility.cases && <Cases setActiveTab={setActiveTab} />}
+      {sectionVisibility.technologies && <Technologies />}
       {sectionVisibility.companyDetails && <CompanyDetails />}
     </>
   )

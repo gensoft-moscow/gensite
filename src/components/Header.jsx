@@ -29,7 +29,7 @@ function Header({ activeTab, setActiveTab }) {
     const updateHeaderTheme = () => {
       const elementBelowHeader = document.elementFromPoint(window.innerWidth / 2 - 100, 96)
       setIsOverDark(Boolean(
-        elementBelowHeader?.closest('.cases-section, .technologies-section, .contact-section'),
+        elementBelowHeader?.closest('.cases-section, .contact-section'),
       ))
     }
 

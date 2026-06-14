@@ -1,9 +1,9 @@
 import Logo from './Logo'
 
-function Footer({ setActiveTab }) {
+function Footer({ dark = false, setActiveTab }) {
   return (
-    <footer>
-      <Logo onClick={() => setActiveTab('home')} />
+    <footer className={dark ? 'footer-dark' : ''}>
+      <Logo light={dark} onClick={() => setActiveTab('home')} />
       <p>© 2026 ООО «СОФТГЕН»</p>
       <div>
         <a href="mailto:info@softgen.ru">info@softgen.ru</a>
