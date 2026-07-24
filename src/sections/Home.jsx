@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import { ArrowDownRight, ChevronRight, Sparkles } from 'lucide-react'
 import DynamicHeroGraph from '../components/DynamicHeroGraph'
 import HeroGraph from '../components/HeroGraph'
@@ -40,9 +40,51 @@ function FittedTitleLine({ className, children }) {
 }
 
 function Home({ setActiveTab }) {
+  const heroRef = useRef(null)
+  const heroVisualRef = useRef(null)
+
+  useEffect(() => {
+    const hero = heroRef.current
+    const heroVisual = heroVisualRef.current
+    if (!hero || !heroVisual) return undefined
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    let animationFrame = 0
+
+    const updateGraphOffset = () => {
+      animationFrame = 0
+
+      if (reduceMotion) {
+        heroVisual.style.transform = ''
+        return
+      }
+
+      const heroRect = hero.getBoundingClientRect()
+      const scrolledPastHeroTop = Math.max(0, -heroRect.top)
+      const parallaxOffset = Math.min(scrolledPastHeroTop, heroRect.height) * 0.5
+      heroVisual.style.transform = `translate3d(0, ${parallaxOffset.toFixed(2)}px, 0)`
+    }
+
+    const requestUpdate = () => {
+      if (animationFrame) return
+      animationFrame = window.requestAnimationFrame(updateGraphOffset)
+    }
+
+    updateGraphOffset()
+    window.addEventListener('scroll', requestUpdate, { passive: true })
+    window.addEventListener('resize', requestUpdate)
+
+    return () => {
+      window.removeEventListener('scroll', requestUpdate)
+      window.removeEventListener('resize', requestUpdate)
+      window.cancelAnimationFrame(animationFrame)
+      heroVisual.style.transform = ''
+    }
+  }, [])
+
   return (
     <>
-      {sectionVisibility.hero && <section className="hero">
+      {sectionVisibility.hero && <section className="hero" ref={heroRef}>
         <div className="hero-copy">
           <p className="eyebrow">
             <Sparkles size={14} /> Разработка цифровых решений
@@ -66,7 +108,7 @@ function Home({ setActiveTab }) {
             </button>
           </div>
         </div>
-        <div className="hero-visual">
+        <div className="hero-visual" ref={heroVisualRef}>
           <div className="legacy-hero-graph">
             <HeroGraph />
           </div>

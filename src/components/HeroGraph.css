@@ -1,4 +1,4 @@
-.hero-visual { align-items: center; display: flex; justify-content: center; min-width: 0; width: 100%; }
+.hero-visual { align-items: center; display: flex; justify-content: center; min-width: 0; position: relative; will-change: transform; width: 100%; z-index: 1; }
 .graph-field { aspect-ratio: 0.92; height: min(700px, 76vw); max-width: 680px; position: relative; width: 116%; }
 .hero-graph { height: 100%; inset: 0; overflow: visible; position: absolute; width: 100%; }
 .graph-layer { color: #45608e; transform-box: fill-box; transform-origin: center; }
