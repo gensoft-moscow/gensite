@@ -75,6 +75,7 @@ function ServiceStack() {
   const canAdvance = activeIndex < services.length - 1
   const canReturn = activeIndex > 0
   const isLeaving = exitDirection !== null
+  const isAnimating = isLeaving || isReturning
 
   const finishSwipeUp = useCallback(() => {
     if (!canAdvance) return
@@ -115,6 +116,11 @@ function ServiceStack() {
     }
 
     const handleTouchMove = (event) => {
+      if (isAnimating) {
+        event.preventDefault()
+        return
+      }
+
       if (!draggingRef.current || isLeaving) return
 
       const offset = event.touches[0].clientY - startYRef.current
@@ -157,7 +163,7 @@ function ServiceStack() {
       stack.removeEventListener('touchend', handleTouchEnd)
       stack.removeEventListener('touchcancel', resetSwipe)
     }
-  }, [activeIndex, canAdvance, canReturn, finishSwipeDown, finishSwipeUp, isLeaving, resetSwipe, updateDragOffset])
+  }, [activeIndex, canAdvance, canReturn, finishSwipeDown, finishSwipeUp, isAnimating, isLeaving, resetSwipe, updateDragOffset])
 
   const handleTransitionEnd = (event) => {
     if (!isLeaving || event.target !== event.currentTarget) return
@@ -175,7 +181,7 @@ function ServiceStack() {
   }
 
   return (
-    <div className="service-stack" aria-label="Услуги" ref={stackRef}>
+    <div className={`service-stack ${isAnimating ? 'is-animating' : ''}`} aria-label="Услуги" ref={stackRef}>
       {orderedServices.map((service, stackIndex) => {
         const ServiceIcon = service.icon
         const isActive = stackIndex === 0

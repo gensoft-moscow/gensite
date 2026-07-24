@@ -35,6 +35,12 @@
     position: relative;
     width: 100%;
   }
+  .service-stack.is-animating {
+    touch-action: none;
+  }
+  .service-stack.is-animating .service-stack-card {
+    touch-action: none;
+  }
   .service-stack-card {
     background: #f8f7f2;
     border: 1px solid rgba(21,25,31,.08);
