@@ -4,8 +4,8 @@ const contacts = [
   {
     icon: Mail,
     label: 'Электронная почта',
-    value: 'info@softgen.ru',
-    href: 'mailto:info@softgen.ru',
+    value: 'info@gensoft.ru',
+    href: 'mailto:info@gensoft.ru',
   },
   {
     icon: Phone,

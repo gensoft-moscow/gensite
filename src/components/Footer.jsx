@@ -4,9 +4,9 @@ function Footer({ dark = false, setActiveTab }) {
   return (
     <footer className={dark ? 'footer-dark' : ''}>
       <Logo light={dark} onClick={() => setActiveTab('home')} />
-      <p>© 2026 ООО «СОФТГЕН»</p>
+      <p>© 2026 ООО «ГЕНСОФТ»</p>
       <div>
-        <a href="mailto:info@softgen.ru">info@softgen.ru</a>
+        <a href="mailto:info@gensoft.ru">info@gensoft.ru</a>
         <span>Нижний Новгород</span>
       </div>
     </footer>
