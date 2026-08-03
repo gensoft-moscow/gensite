@@ -1,10 +1,4 @@
-const details = [
-  ['Полное наименование', 'Общество с ограниченной ответственностью «ГЕНСОФТ»'],
-  ['Сокращённое наименование', 'ООО «ГЕНСОФТ»'],
-  ['ИНН / КПП', '5258140478 / 525801001'],
-  ['ОГРН', '1185275032270'],
-  ['Юридический адрес', '603140, Нижегородская обл., г. Нижний Новгород, пр-т Ленина, д. 11, помещ. П5, офис 2'],
-]
+import { companyDetails } from '../data/companyDetails'
 
 function CompanyDetails() {
   return (
@@ -14,7 +8,7 @@ function CompanyDetails() {
         <h2>Открыто говорим,<br />с кем вы работаете.</h2>
       </div>
       <dl className="details-list">
-        {details.map(([term, description]) => (
+        {companyDetails.map(([term, description]) => (
           <div key={term}>
             <dt>{term}</dt>
             <dd>{description}</dd>

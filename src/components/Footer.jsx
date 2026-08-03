@@ -7,7 +7,7 @@ function Footer({ dark = false, setActiveTab }) {
       <p>© 2026 ООО «ГЕНСОФТ»</p>
       <div>
         <a href="mailto:info@gensoft.ru">info@gensoft.ru</a>
-        <span>Нижний Новгород</span>
+        <span>Москва</span>
       </div>
     </footer>
   )

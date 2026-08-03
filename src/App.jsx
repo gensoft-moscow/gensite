@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { sectionVisibility } from './config/sectionVisibility'
@@ -6,13 +6,12 @@ import About from './sections/About'
 import Cases from './sections/Cases'
 import Contact from './sections/Contact'
 import Home from './sections/Home'
-import Services from './sections/Services'
 
 function App() {
   const [activeTab, setActiveTab] = useState('home')
   const projectsTheme = activeTab === 'cases'
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const themeColor = projectsTheme ? '#15191f' : '#f2f1ed'
     const metaTheme = document.querySelector('meta[name="theme-color"]')
 
@@ -38,7 +37,6 @@ function App() {
       <Header activeTab={activeTab} setActiveTab={changeTab} />
       <main key={activeTab} className="page-enter">
         {activeTab === 'home' && <Home setActiveTab={changeTab} />}
-        {activeTab === 'services' && <Services expanded setActiveTab={changeTab} />}
         {activeTab === 'cases' && <Cases expanded setActiveTab={changeTab} />}
         {activeTab === 'about' && <About />}
         {sectionVisibility.contact && !projectsTheme && <Contact />}

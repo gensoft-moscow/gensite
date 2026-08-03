@@ -24,6 +24,7 @@ function AcrylicTabs({ activeTab, setActiveTab }) {
 function Header({ activeTab, setActiveTab }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isOverDark, setIsOverDark] = useState(false)
+  const darkContext = activeTab === 'cases' || isOverDark
 
   useEffect(() => {
     const updateHeaderTheme = () => {
@@ -44,9 +45,9 @@ function Header({ activeTab, setActiveTab }) {
   }, [activeTab])
 
   return (
-    <header className={`site-header ${isOverDark ? 'dark-context' : ''} ${menuOpen ? 'menu-open' : ''}`}>
+    <header className={`site-header ${darkContext ? 'dark-context' : ''} ${menuOpen ? 'menu-open' : ''}`}>
       <div className="header-acrylic header-brand">
-        <Logo light={isOverDark} onClick={() => setActiveTab('home')} />
+        <Logo light={darkContext} onClick={() => setActiveTab('home')} />
       </div>
       <div className="desktop-nav">
         <AcrylicTabs

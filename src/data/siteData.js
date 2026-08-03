@@ -1,6 +1,5 @@
 export const tabs = [
   { id: 'home', label: 'Главная' },
-  { id: 'services', label: 'Решения' },
   { id: 'cases', label: 'Проекты' },
   { id: 'about', label: 'О нас' },
 ]

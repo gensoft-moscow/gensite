@@ -134,7 +134,9 @@
   .technology-grid { grid-template-columns: repeat(2,1fr); }
   .details-section { grid-template-columns: 1fr; }
   .process-row, .stats-row { grid-template-columns: repeat(2,1fr); }
-  .about-layout, .contact-section { grid-template-columns: 1fr; }
+  .about-layout, .about-legal, .contact-section { grid-template-columns: 1fr; }
+  .values { max-width: 760px; }
+  .documents-panel { grid-column: auto; }
 }
 
 @media (max-width: 620px) {
@@ -227,6 +229,8 @@
   .statement-section h2 { margin-top: 28px; }
   .services-section, .technologies-section, .details-section, .cases-section, .about-page { padding: 64px 24px 72px; }
   .page-section { padding-top: 104px; }
+  .about-title { font-size: clamp(25px, 7vw, 34px); }
+  .about-title-indent { margin-left: 28px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 24px; margin-bottom: 36px; }
   .section-heading.has-cta > div { padding-right: 0; padding-top: 58px; }
   .section-heading.has-cta .section-cta { left: auto; right: 0; top: 0; }
@@ -237,10 +241,22 @@
   .technologies-intro { max-width: 100%; }
   .details-section { gap: 38px; }
   .details-list > div { gap: 10px; grid-template-columns: 1fr; }
+  .about-details-list > div { gap: 10px; grid-template-columns: 1fr; }
+  .about-legal { gap: 34px; margin-top: 56px; padding-top: 40px; }
   .process-row, .stats-row { grid-template-columns: 1fr; }
   .process-step { border-bottom: 1px solid var(--line); padding-bottom: 20px; }
-  .stats-row > div:first-child, .stats-row > div:last-child { border-radius: 0; }
-  .value-item { gap: 12px; grid-template-columns: 35px 1fr; }
+  .stats-row > div,
+  .stats-row > div:first-child,
+  .stats-row > div:last-child { border-radius: 14px; min-height: 96px; padding: 18px 20px; }
+  .stats-row span { font-size: 15px; }
+  .values { display: block; padding-bottom: 10px; }
+  .about-lead { padding: 22px; }
+  .about-lead p { font-size: 17px; }
+  .value-item { gap: 8px 10px; grid-template-columns: 28px 1fr; min-height: 0; padding: 20px 26px 22px 20px; }
+  .value-item + .value-item { margin-top: -10px; }
+  .value-item:nth-child(2),
+  .value-item:nth-child(3) { margin-left: 0; margin-right: 0; }
+  .value-item h3,
   .value-item p { grid-column: 2; }
   .contact-section { gap: 42px; min-height: 430px; padding: 64px 24px 44px; }
   .contact-list { grid-template-columns: 1fr; }

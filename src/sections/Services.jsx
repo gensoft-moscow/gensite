@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import {
-  ArrowUpRight,
   Blocks,
   Code2,
   Headphones,
@@ -219,9 +218,9 @@ function ServiceStack() {
   )
 }
 
-function Services({ setActiveTab, expanded = false }) {
+function Services({ expanded = false }) {
   return (
-    <section className={`services-section ${expanded ? 'page-section' : ''}`}>
+    <section className={`services-section ${expanded ? 'page-section' : ''}`} id="services">
       <div className="section-heading has-cta">
         <div>
           <p className="section-kicker">Наши услуги</p>
@@ -231,18 +230,6 @@ function Services({ setActiveTab, expanded = false }) {
               : 'Подключаемся там, где технологии должны приносить результат.'}
           </h2>
         </div>
-        {!expanded && (
-          <button
-            className="section-cta"
-            onClick={() => setActiveTab('services')}
-            aria-label="Все услуги"
-          >
-            <span>Все услуги</span>
-            <span className="section-cta-icon">
-              <ArrowUpRight />
-            </span>
-          </button>
-        )}
       </div>
       <div className="service-grid">
         {services.map((service) => {

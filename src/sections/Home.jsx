@@ -103,7 +103,7 @@ function Home({ setActiveTab }) {
             <button className="primary-button" onClick={() => setActiveTab('cases')}>
               Смотреть проекты <ArrowDownRight size={20} />
             </button>
-            <button className="text-button" onClick={() => setActiveTab('services')}>
+            <button className="text-button" onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })}>
               Наши решения <ChevronRight size={18} />
             </button>
           </div>
@@ -115,9 +115,7 @@ function Home({ setActiveTab }) {
           <DynamicHeroGraph />
         </div>
         <div className="hero-footnote">
-          <span>Москва · Работаем по всему миру</span>
-          <span className="line" />
-          <span>С 2014 года</span>
+          <span>Москва</span>
         </div>
       </section>}
 
@@ -132,7 +130,7 @@ function Home({ setActiveTab }) {
         </h2>
       </section>}
 
-      {sectionVisibility.services && <Services setActiveTab={setActiveTab} />}
+      {sectionVisibility.services && <Services />}
       {sectionVisibility.cases && <Cases setActiveTab={setActiveTab} />}
       {sectionVisibility.technologies && <Technologies />}
       {sectionVisibility.companyDetails && <CompanyDetails />}
