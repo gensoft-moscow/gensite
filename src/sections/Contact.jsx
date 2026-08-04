@@ -10,8 +10,8 @@ const contacts = [
   {
     icon: Phone,
     label: 'Телефон',
-    value: '+7 (499) 490-22-90',
-    href: 'tel:+74994902290',
+    value: '+7 (916) 699-33-67',
+    href: 'tel:+79166993367',
   },
   {
     icon: MapPin,
